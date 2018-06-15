@@ -32,7 +32,44 @@ public class Medicine extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
+            
+            
+            out.print(" <head>\n" +
+"        <title>MedCare</title>\n" +
+"        <meta charset=\"UTF-8\">\n" +
+"        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
+"   <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n" +
+"   <link rel=\"stylesheet\" type=\"text/css\" href=\"new.css\"/>\n" +
+"   <link rel=\"stylesheet\" href=\"font-awesome-4.7.0/css/font-awesome.min.css\">"
+                    + "</head>");
+            
             out.println("<body>");
+            
+            
+            
+            
+            out.print(" <div class='a'>\n" +
+"                <table>\n" +
+"                    <tr>\n" +
+"                        <th><i class=\"fa fa-home\"></i></th>\n" +
+"                        <th><i class=\"fa fa-search-plus\"></i></th>\n" +
+"                        <th><i class=\"fa fa-cart-plus\"></i></th>\n" +
+"                        <th><i class=\"fa fa-sign-out\"></i></th>\n" +
+"                    </tr>\n" +
+"                    <tr>\n" +
+"                        <th><a href=\"index.html\"><font>Home</font></a></th>\n" +
+"                        <th><a href=\"search.html\"><font>Search</font></a></th>\n" +
+"                        <th><a href=\"cart.java\"><font>Cart</font></a></th>\n" +
+"                        <th><a href=\"\"><font>Logout</font></a></th>\n" +
+"                    </tr></table>\n" +
+"                    </div>");
+            
+            
+            
+            
+            
+            
+            
             out.println("<a href='index.html'>Go Back</a>");
             String s = request.getParameter("Enter");
             //String url = "http://www.healthos.co/api/v1/medicines/brands?page=1&size=10";
@@ -61,7 +98,9 @@ public class Medicine extends HttpServlet {
                      
    ArrayList<String> list=new ArrayList<>();
             out.print("<form action='Cart'>");
+           
             out.print("<table border='1' width='50%'>");
+          
             while (count < a1.length()) {
                 JSONObject o1 = a1.getJSONObject(count);
                 String name = o1.getString("name");
@@ -69,18 +108,20 @@ public class Medicine extends HttpServlet {
                 out.print("<tr style='border: 1px solid black'>");
 //                out.print("<p>" + name+" "+price+ "</p>");
                 out.print("<td>");
-                out.print("<div>");                               
-                out.print("<input type='text' id=name"+count+" value="+name+" name=name"+count+">");
+                out.print("<div class='check'>");                        
+                out.print("<h4 id=name"+count+" name=name"+count+">"+name+"</h4>");
+                //out.print("<input type='text' id=name"+count+" value="+name+" name=name"+count+">");
                 out.print("</div>");
                 out.print("</td>");
                 
                 out.print("<td>");
-                out.print("<div>");                               
-                out.print("<input type='text' id=t"+count+" value="+price+" name=price"+count+">");
+                out.print("<div class='check'>");      
+                out.print("<h4 id=t"+count+" name=price"+count+">"+price+"</h1>");
+                //out.print("<input type='text' id=t"+count+" value="+price+" name=price"+count+">");
                 out.print("</div>");
                 out.print("</td>");
                 
-                out.print("<td>");
+                out.print("<td class='check'>");
                 out.print("<div>");                               
                 out.print("<input type='checkbox' id="+count+" name="+count+">");
                 out.print("</div>");

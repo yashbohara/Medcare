@@ -1,0 +1,45 @@
+div.a{
+    background-color: #012b72;
+    text-align: center;
+    margin: 0px;
+}
+font{
+    color: white;
+}
+i{
+    color:white;
+    text-align: center;
+}
+/*body{
+    background-image: url("b.jpg");
+}*/
+tr{
+    text-align: center;
+}
+th{
+    text-align: center;
+    padding-right: 350px;
+}
+table{
+align-content: center;
+}
+div.rec{
+    text-align: center;
+    margin: auto;
+    margin-top: 200px;
+    animation:cubic-bezier;
+    animation-duration: 4s;
+    background-color: #012b72;
+    height: 200px;
+    width: 500px;
+}
+h4{
+    color: white;
+}
+div.check{
+    text-align: center;
+    margin: auto;
+    background-color: #012b72;
+    height: 30px;
+    width: 500px;
+}
