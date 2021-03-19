@@ -27,7 +27,6 @@ int count = Integer.parseInt(aSession.getAttribute("c").toString());
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet Cart</title>"); 
-
             out.println("</head>");
             out.println("<body>");
             out.println("<a href='index.html'>Go Back</a>");
