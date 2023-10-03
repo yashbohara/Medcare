@@ -9,8 +9,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Create Branch
-        uses: Vent-Finance/branch_creator@v1.0.0
+        uses: peterjgrainger/action-create-branch@v2.0.1
         env:
          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         with:
-           name: release
+           branch: release-candidate
