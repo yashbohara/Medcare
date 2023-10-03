@@ -1,0 +1,14 @@
+name: Backup
+on:
+  pull_request:
+    branches:
+      - master
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  backup_repo:
+    runs-on: windows-latest
+    steps:
+      - name: Create Branch
+        uses: peterjgrainger/action-create-branch@v2.0.1
+        with:
+           branch: release-candidate
