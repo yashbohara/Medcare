@@ -28,6 +28,9 @@ int count = Integer.parseInt(aSession.getAttribute("c").toString());
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+
+            //Test commit
+
             out.println("<title>Servlet Cart</title>"); 
             out.println("</head>");
             out.println("<body>");
